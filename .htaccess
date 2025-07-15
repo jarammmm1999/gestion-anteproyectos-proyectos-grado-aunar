@@ -1,0 +1,12 @@
+RewriteEngine On
+Options All -Indexes
+
+# Permitir acceso directo a archivos PDF y documentos de Word
+RewriteCond %{REQUEST_URI} !\.(pdf|doc|docx)$ [NC]
+
+# Evita la redirección de archivos estáticos (como PDF, imágenes, CSS, JS, etc.)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Redirige el resto de las solicitudes a index.php
+RewriteRule ^([a-zA-Z0-9/ñÑ-]+)$ index.php?views=$1 [L,QSA]

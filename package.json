@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "jquery": "^3.7.1",
+    "lightbox": "^0.5.0",
+    "lightbox2": "^2.11.4",
+    "sweetalert2": "^11.12.4"
+  }
+}
